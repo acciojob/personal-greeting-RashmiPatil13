@@ -19,7 +19,7 @@ const App = () => {
                 <h1>Enter your name :</h1>
                 <input type="text" onChange={getValue}/>
             </form>
-            <p> Hello &nbsp;{text}</p>
+            <p> Hello &nbsp;{text}!</p>
         
     </div>
   )
