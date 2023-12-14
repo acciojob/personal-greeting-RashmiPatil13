@@ -3,23 +3,14 @@ import React,{useState} from "react";
 import './../styles/App.css';
 
 const App = () => {
-  const [text,setText] = useState("") // ab
-
-    console.log("text",text) // a
-
-    function getValue(event){
-        
-         setText(event.target.value) //ab
-    }
+  let [text, setText]  = useState('');
   return (
     <div>
-        {/* Do not remove the main div */}
-        
-            <form>
-                <h1>Enter your name :</h1>
-                <input type="text" onChange={getValue}/>
-            </form>
-            <p> Hello &nbsp;{text}!</p>
+      <p>Enter your name:</p>
+       <input
+       onChange={(e)=>setText(e.target.value)}
+       value={text}/>
+       {text.length > 0 ? <p>Hello {text}!</p>: null }
         
     </div>
   )
